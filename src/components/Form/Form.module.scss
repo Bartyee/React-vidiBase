@@ -1,0 +1,43 @@
+.Form{
+    padding-top: 210px;
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 65px;
+
+    .iconWrap{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        border-right: solid #53b25e 2px;
+        border-left: solid #53b25e 2px;
+        border-radius: 25px;
+        height: 45px;
+        
+        .icon{
+            width: 25px;
+        }
+    }
+
+    
+
+    input[type="text"]{
+        width: 100%;
+        background-color: #141d21;
+        color: #ffffff;
+        border-radius: 15px;
+        border: none;
+        height: 45px;
+        margin: 0 auto;
+        padding-left: 65px;
+        transition: 0.5s;
+
+        &:focus{
+            color: #53b25e;
+        }
+    }
+
+}

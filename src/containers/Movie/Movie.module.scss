@@ -1,0 +1,109 @@
+.Movie{
+        display: flex;
+        width: 50%;
+        background-color: #000000;
+        margin-top: 120px;
+        .cover{
+            margin-right: 30px;
+            img{
+                border-radius: 15px;
+                width: 350px;
+            }
+        }
+        
+        .details{
+            display: flex;
+            flex-direction: column;
+    
+            .movieTitle{
+                color: #77ff87;
+                text-transform: uppercase;
+                font-family: 'Raleway', sans-serif;
+                color: #ffffff;
+                margin-bottom: 0;
+            }
+    
+            .movieTagLine{
+                margin-top: 0;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 18px;
+                color: #77ff87;
+            }
+    
+            .movieOverview{
+                text-align: left;
+                color: #ffffff;
+                line-height: 23px;
+                font-size: 16px;
+            }
+    
+            .genresList{
+                display: flex;
+                color: #77ff87;
+                font-family: 'Raleway', sans-serif;
+                .genreItem{
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+    
+            .companyNames{
+                display: flex;
+                font-size: 14px;
+                font-family: 'Raleway', sans-serif;
+                color: #ffffff;
+                line-height: 25px;
+                width: 100%;
+                text-align: left;
+            }
+
+            .additionalDetails{
+
+                .releaseDate{
+                    
+                }
+
+                .budget{
+                    
+                }
+
+                .wrapperOne{
+                    
+                    
+                    p{
+                        color: #ffffff;
+                        text-align: left;
+                        font-size: 20px;
+                        font-family: 'Raleway', sans-serif;
+                        margin-bottom: 0;
+                    }
+    
+                    span{
+                        font-size: 40px;
+                        color: #77ff87;
+                    }
+            
+                }
+
+                .wrapperTwo{
+                    display: flex;
+                    
+
+                    p{
+                        color: #ffffff;
+                        text-align: left;
+                        font-size: 20px;
+                        font-family: 'Raleway', sans-serif;
+                        margin-bottom: 0;
+                    }
+
+                    span{
+                        font-size: 40px;
+                        color: #77ff87;
+                    }
+                }
+            }
+        }
+    }
+
+

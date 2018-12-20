@@ -1,0 +1,92 @@
+.Header{
+    background-color: #141d21;
+    height: 65px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+
+    .logo{
+        height: 100%;
+        width: 95%;
+        display: flex;
+        margin-left: 25px;
+        flex-direction: row;
+        align-items: center;
+
+        img{
+            height: 50px;
+            width: 50px;
+        }
+
+        a{
+            text-decoration: none;
+            p{
+                margin: 0;
+                margin-left: 15px;
+                color: #53b25e;
+                font-size: 25px;
+                font-family: 'Raleway', sans-serif;
+                transition: 0.5s;
+
+                &:hover{
+                    color: #77ff87;
+                    
+                }
+            }
+        }
+
+        
+    }
+
+    nav{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        margin-right: 30px;
+
+        .hamburgerMenu{
+            background-color: transparent;
+            border: none;
+            display: none;
+            
+            img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+        .list{
+            display: flex;
+            list-style-type: none;
+
+            .item{
+                text-align: center;
+                font-family: 'Raleway', sans-serif;
+                font-size: 14px;
+                width: 100px;
+                margin: 0 auto;
+                
+
+                a{
+                    color: #53b25e;
+                    text-decoration: none;
+                    transition: 0.5s;
+
+                    &:hover{
+                        color: #77ff87;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 545px){
+            .hamburgerMenu{
+                display: flex;
+            }
+            .list{
+                display: none;
+            }
+        }
+    }
+}
+
+
