@@ -1,6 +1,7 @@
-import React,{Component} from 'react';
+import React from 'react';
 import axios from 'axios';
 import classes from './Movie.module.scss';
+import LikeButton from '../../components/likeButton/likeButton.js';
 
 
 class Movie extends React.Component {
@@ -15,8 +16,10 @@ class Movie extends React.Component {
             production_companies: [],
             videos: {
                 results: []
-            }
-        }
+            },
+            backdrop_path: null
+        },
+        favouriteArray: []
     }
 
     
@@ -30,38 +33,37 @@ class Movie extends React.Component {
             this.setState({
                 movie: response.data
             });
-            this.props.myCallback(this.state.movie.backdrop_path);
+            
         })
         .catch(error => {
             console.log('Fetch Error', error);
         })
-
-        
     }
 
     componentDidMount(){
         this.getDataApi();
     }
 
-
-    someFn = () => {
-        let background = this.state.movie.backdrop_path;
-        this.props.callbackFromParent(background);
-    };
-    
-
-
-
     render(){
 
         const movie = this.state.movie;
+        const budgetToString = `${movie.revenue}`.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        
+        let backgroundStyle = {
+            background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,1)), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path}) no-repeat fixed center `
+        }
+
         
         
         return(
-            
             <div className={classes.Movie}>
+                <div className={classes.backgroundAbsolute} style={backgroundStyle}>
+                    <div className={classes.additionalGradient}></div>
+                </div>
+                <div className={classes.wrapper}>
                 <div className={classes.cover}>
                     <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="cover" />
+                    <LikeButton/>
                 </div>
                 <div className={classes.details}>
                     <h1 className={classes.movieTitle}>{movie.original_title}</h1>
@@ -95,30 +97,39 @@ class Movie extends React.Component {
                                 <p>Original Release: </p>
                                 <span>{movie.release_date}</span>
                             </div>
-                            <div className={classes.runningTime}>
-                                <p>Running Time: </p>
-                                <span>{movie.runtime} mins</span>
+                            <div className={classes.budget}>
+                                <p>Budget: </p>
+                                <span>{budgetToString === "0" ? "-" : '$' + budgetToString}</span>
                             </div>
                         </div>
                         <div className={classes.wrapperTwo}>
-                            <div className={classes.budget}>
-                                <p>Budget: </p>
-                                <span>
-                                    {!(movie.budget === null) ? '-' : movie.budget}
-                                </span>
+                            <div className={classes.runningTeam}>
+                                <p>Running Time: </p>
+                                <span>{movie.runtime} mins</span>
                             </div>
-                            <div className={classes.averageVote}>
+                            <div className={classes.avarageVote}>
                                 <p>Vote Average: </p>
-                                <span>{movie.vote_average}</span>
+                                <span>{movie.vote_average}/10</span>
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
-                
+                <div className={classes.trailers}>
+                    {movie.videos.results.map((item,index) => {
+                        if(index===3){
+                            return index
+                        }
+                        return(
+                            <div className={classes.trailerItem} key={index}>
+                            <iframe title={index} width="420" height="315" src={`https://www.youtube.com/embed/${item.key}`} ></iframe>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
             
-            
-            
+                
         )
     }
 }

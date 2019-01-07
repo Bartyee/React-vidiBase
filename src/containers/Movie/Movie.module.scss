@@ -1,26 +1,64 @@
 .Movie{
-        display: flex;
-        width: 50%;
+    display: flex;
+
+    .backgroundAbsolute{
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapper{
+        justify-content: center;
+        
+        width: 1100px;
+        min-width: 320px;
         background-color: #000000;
-        margin-top: 120px;
+        margin: 0 auto;
+        margin-top: 65px;
+        display: flex;
+
+        // Medium devices (tablets, 821px and down)
+        @media (max-width: 821px) { 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+        }
+
         .cover{
-            margin-right: 30px;
+            margin-right: 25px;
+            position: relative;
+            
+
+            @media (max-width: 821px) { 
+                width: 65%;
+                margin: 0 auto;
+            }
+            
+            
             img{
-                border-radius: 15px;
-                width: 350px;
+                width: 320px;
+
+                @media (max-width: 821px) { 
+                    width: 100%; 
+                }
             }
         }
-        
+
         .details{
-            display: flex;
-            flex-direction: column;
-    
+           
+
             .movieTitle{
                 color: #77ff87;
                 text-transform: uppercase;
                 font-family: 'Raleway', sans-serif;
                 color: #ffffff;
                 margin-bottom: 0;
+                margin-top: 15px;
+
+                
             }
     
             .movieTagLine{
@@ -38,67 +76,55 @@
             }
     
             .genresList{
-                display: flex;
                 color: #77ff87;
+                margin-bottom: 5px;
                 font-family: 'Raleway', sans-serif;
-                .genreItem{
-                    font-size: 16px;
-                    margin: 0;
-                }
             }
     
             .companyNames{
-                display: flex;
+                margin-top: 5px;
                 font-size: 14px;
                 font-family: 'Raleway', sans-serif;
                 color: #ffffff;
-                line-height: 25px;
-                width: 100%;
-                text-align: left;
             }
-
+    
             .additionalDetails{
+                display: flex;
+                margin-top: 45px;
 
-                .releaseDate{
-                    
-                }
-
-                .budget{
-                    
-                }
-
+                
+                
                 .wrapperOne{
                     
-                    
+                    width: 50%;
+
                     p{
                         color: #ffffff;
                         text-align: left;
-                        font-size: 20px;
+                        font-size: 15px;
                         font-family: 'Raleway', sans-serif;
                         margin-bottom: 0;
                     }
     
                     span{
-                        font-size: 40px;
+                        font-size: 20px;
                         color: #77ff87;
                     }
-            
                 }
 
                 .wrapperTwo{
-                    display: flex;
-                    
+                    width: 50%;
 
                     p{
                         color: #ffffff;
                         text-align: left;
-                        font-size: 20px;
+                        font-size: 15px;
                         font-family: 'Raleway', sans-serif;
                         margin-bottom: 0;
                     }
-
+    
                     span{
-                        font-size: 40px;
+                        font-size: 20px;
                         color: #77ff87;
                     }
                 }
@@ -106,4 +132,31 @@
         }
     }
 
+    .trailers{
+        position: absolute;
+        border: solid 1px #77ff87;
+        border-radius: 25px;
+        border-top: none;
+        border-bottom: none;
+        display: flex;
+        right: 0;
+        bottom: 0;
+        margin-top: 65px;
 
+        @media (max-width: 821px) { 
+            display: none;
+        }
+        
+        
+        .trailerItem{
+            
+            iframe{
+                width: 180px;
+                margin: 12.5px;
+                height: 150px;
+                border: none;
+            }
+        }
+    }
+    
+}

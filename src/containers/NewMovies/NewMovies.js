@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import classes from './NewMovies.module.scss';
-import blankImage from '../../assets/No_image.svg';
+import blankImage from '../../assets/No_image.jpg';
 import RatingCircle from '../../components/RatingCircle/RatingCircle';
 import { Link } from 'react-router-dom';
 
@@ -26,9 +26,10 @@ class NewMovies extends React.Component {
                 const data = response.data;
                 const updatedData = Object.values(data)[3]; // in array number 3 we have all movies list
                 this.setState({movies: updatedData})
-
-                this.props.renderDone();
-                
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
             })
     }
 
@@ -46,7 +47,6 @@ class NewMovies extends React.Component {
                             <span className={classes.release_date}>{item.release_date}</span>
                         </div>
                     </Link>
-                    
                 </div>
                 
             ) 

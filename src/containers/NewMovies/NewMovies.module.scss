@@ -1,5 +1,7 @@
 .wrapper{
     width: 100%;
+    
+    
     .headerText{
         color: #77ff87;
         font-family: 'Raleway', sans-serif; 
@@ -8,9 +10,10 @@
     .NewMovies{
         display: flex;
         flex-wrap: wrap;
-        width: 75%;
+        width: 80%;
         margin: 0 auto;
         justify-content: center;
+        
     
         .movie{
             margin: 25px;

@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Header.module.scss';
 import mainIcon from '../../assets/play-button.svg';
 import hamburgerIcon from '../../assets/list-menu.svg';
-import {Link} from 'react-router-dom';
+
 
 
 const Header = (props) => {
@@ -20,8 +20,8 @@ const Header = (props) => {
                 </button>
                 <ul className={classes.list}>
                     <li className={classes.item}><a href="/">Favourites</a></li>
-                    <li className={classes.item}><a href="/">Github</a></li>
-                    <li className={classes.item}><a href="/">MoviesDB Api</a></li>
+                    <li className={classes.item}><a href="https://github.com/Bartyee">Github</a></li>
+                    <li className={classes.item}><a href="https://developers.themoviedb.org/">MoviesDB Api</a></li>
                 </ul>
             </nav>
         </div>

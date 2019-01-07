@@ -1,31 +1,17 @@
-import React, {Component} from 'react';
-import Header from '../../components/Header/Header'
+import React from 'react';
+import NewMovies from '../NewMovies/NewMovies';
 import Form from '../../components/Form/Form';
-import NewMovies from '../../containers/NewMovies/NewMovies';
+import classes from './Home.module.scss';
 
-
-
-class Home extends Component {
-
-    state = {
-        renderNewestMoviesDone: false
-      }
-    
-      renderDone = () => {
-        this.setState({
-          renderNewestMoviesDone: !false
-        })
-      }
-
+class Home extends React.Component{
     render(){
         return(
-            <>
-            {this.state.renderNewestMoviesDone === true ? <Form/> : null}
-            <NewMovies renderDone={this.renderDone}/>
-            </>
+            <div className={classes.wrapperAdditionalHome}>
+                <Form />
+                <NewMovies />
+            </div>
         )
     }
-    
 }
 
 export default Home;

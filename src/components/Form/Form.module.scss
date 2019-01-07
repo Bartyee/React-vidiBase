@@ -1,14 +1,16 @@
 .Form{
-    padding-top: 210px;
+    padding-top: 110px;
     width: 65%;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     margin-bottom: 65px;
 
     .iconWrap{
         position: absolute;
+        left: 0;
         display: flex;
         justify-content: center;
         width: 50px;
@@ -37,6 +39,51 @@
 
         &:focus{
             color: #53b25e;
+            outline: 0;
+        }
+    }
+
+    ul{
+        
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        position: absolute;
+        top: 185px;
+        z-index: 15;
+        background-color: #141d21;
+        
+        li{
+            display: flex;
+            flex-direction: row;
+            
+            margin: 10px;
+            
+
+            img{
+                width: 100px;
+                height: 140px;
+            }
+
+            a{
+                display: flex;
+                flex-direction: row;
+                
+                align-items: center;
+                text-decoration: none;
+                color: #53b25e;
+                font-weight: bold;
+                width: 100%;
+
+                p,span{
+                    margin-left: 10px;
+                    width: 100%;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
         }
     }
 
