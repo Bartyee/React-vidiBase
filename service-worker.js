@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/React-vidiBase/movie/297802/precache-manifest.0ac3e1df37e5977c302bef121e92d968.js"
+  "/React-vidiBase/precache-manifest.9e2041dc40638e4527495d10b376b4a0.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/React-vidiBase/movie/297802/index.html", {
+workbox.routing.registerNavigationRoute("/React-vidiBase/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
