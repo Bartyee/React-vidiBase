@@ -49,6 +49,7 @@
             background-color: transparent;
             border: none;
             display: none;
+            cursor: pointer;
             
             img{
                 width: 35px;
@@ -79,12 +80,41 @@
             }
         }
 
-        @media only screen and (max-width: 545px){
-            .hamburgerMenu{
-                display: flex;
+        .additionalNav{
+            display: none;
+            
+
+            .item{
+                height: 23px;
+                width: 23px;
+                padding: 0;
+                margin: 0;
+                
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
             }
+        }
+
+        @media only screen and (max-width: 545px){
+
             .list{
                 display: none;
+            }
+        
+            .additionalNav{
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                width: 100px;
+                padding: 0;
+                margin-left: 15px;
+                list-style-type: none;
+
+                .item{
+                    margin: 0 3px;
+                }
             }
         }
     }
