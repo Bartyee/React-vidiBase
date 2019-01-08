@@ -14,22 +14,20 @@ class NewMovies extends React.Component {
         }
     }
 
-
     componentDidMount(){
         const apiKey = '30bef07fcafe04cd96cf1b120d33cfe0';
         let date = new Date();
         let today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-        let monthAgo = (date.getMonth() === 0 ? date.getFullYear() - 1 : date.getFullYear()) + '-' + (date.getMonth() === 0 ? date.getMonth() + 12 : date.getMonth()) + '-' + date.getDate();
+        let monthAgo = (date.getMonth() === 0 ? date.getFullYear() - 1 : date.getFullYear()) + '-' + (date.getMonth() === 0 ? date.getMonth() + 12 : date.getMonth()) + '-' + date.getDate(); 
 
         axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&primary_release_date.gte=${monthAgo}&primary_release_date.lte=${today}`)
             .then(response =>{
                 const data = response.data;
-                const updatedData = Object.values(data)[3]; // in array number 3 we have all movies list
+                const updatedData = Object.values(data)[3]; // in array number 3, we have all movies list
                 this.setState({movies: updatedData})
             })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
+            .catch(err => {
+                console.log(err);
             })
     }
 
@@ -48,7 +46,6 @@ class NewMovies extends React.Component {
                         </div>
                     </Link>
                 </div>
-                
             ) 
         })
         return(
@@ -58,7 +55,6 @@ class NewMovies extends React.Component {
                     {moviesList}
                 </div>
             </div>
-            
         )
     }
 }

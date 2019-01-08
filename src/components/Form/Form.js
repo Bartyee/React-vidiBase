@@ -1,56 +1,46 @@
 import React from 'react';
 import FormResults from './FormResults';
 import icon from '../../assets/magnifier.svg';
-
 import classes from './Form.module.scss';
 
 class Form extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        results: []
-      }
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.handleKeyUp = this.handleKeyUp.bind(this);
+    
+    state = {
+      results: []
     }
   
-    handleSubmit(e) {
+    handleSubmit = (e) => {
       e.preventDefault();
     }
   
-    handleKeyUp() {
+    handleKeyUp = () => {
       document.getElementById('results').className = 'formResults';
-      let val = document.getElementById('searchInput').value;
+      let val = document.querySelector('#searchInput').value;
   
-      if (val === '') {
-        document.getElementById('results').style.display = 'none';
+      if(val === ''){
+        document.querySelector('#results').style.display = 'none';
       }
       else{
       const key = '30bef07fcafe04cd96cf1b120d33cfe0';
-      document.getElementById('results').style.display = 'block';
+      document.querySelector('#results').style.display = 'block';
   
       fetch(`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&query=${val}&page=1&include_adult=false`)
         .then(response => {
-          if (response.status !== 200) {
+          if(response.status !== 200) {
             console.log('Error: ' + response.status);
             return;
           }
-  
           response.json().then(data => {
-            const results = data.results.slice(1,13);
-            
+            const results = data.results.slice(1,13); // Length so long, must slice to display on site.
             this.setState({ results });
           });
         })
-  
         .catch(err => {
           console.log('Fetch Error :-S', err);
         })
-    }
       }
-  
-      
-  
+    }
+
     render() {
       return(
         <form onSubmit={this.handleSubmit} className={classes.Form}>

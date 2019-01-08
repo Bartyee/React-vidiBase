@@ -3,6 +3,10 @@
 
     .backgroundAbsolute{
         position: fixed;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-attachment: fixed;
+        background-size: cover;
         z-index: -1;
         top: 0;
         width: 100%;
@@ -11,7 +15,6 @@
 
     .wrapper{
         justify-content: center;
-        
         width: 1100px;
         min-width: 320px;
         background-color: #000000;
@@ -31,12 +34,10 @@
             margin-right: 25px;
             position: relative;
             
-
             @media (max-width: 821px) { 
                 width: 65%;
                 margin: 0 auto;
             }
-            
             
             img{
                 width: 320px;
@@ -48,7 +49,6 @@
         }
 
         .details{
-           
 
             .movieTitle{
                 color: #77ff87;
@@ -57,8 +57,6 @@
                 color: #ffffff;
                 margin-bottom: 0;
                 margin-top: 15px;
-
-                
             }
     
             .movieTagLine{
@@ -92,10 +90,7 @@
                 display: flex;
                 margin-top: 45px;
 
-                
-                
                 .wrapperOne{
-                    
                     width: 50%;
 
                     p{
@@ -147,9 +142,7 @@
             display: none;
         }
         
-        
         .trailerItem{
-            
             iframe{
                 width: 180px;
                 margin: 12.5px;
@@ -158,5 +151,4 @@
             }
         }
     }
-    
 }

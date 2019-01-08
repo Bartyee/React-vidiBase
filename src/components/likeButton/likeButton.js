@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import classNames from 'classnames';
-import Radium, {StyleRoot} from 'radium';
+import Radium from 'radium';
 import heart from '../../assets/heart.png';
 import heartHover from '../../assets/heartHover.png';
-
 
 class likeButton extends Component {
 
@@ -57,15 +56,10 @@ class likeButton extends Component {
         }
     }
 
-
-    
     return (
-        
             <div className={btnClass} onClick={handleClick} style={this.state.mainStyle} key="1">
                 <img src={this.state.imgStyle.imgUse} style={this.state.imgStyle} alt="LIKE" key="2"/>
             </div>
-       
-        
     )
   }
 }

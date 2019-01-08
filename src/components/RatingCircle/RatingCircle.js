@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const RatingCircle = (props) => {
 
         let rating = props.rating;
@@ -28,8 +27,6 @@ const RatingCircle = (props) => {
                 return 'green';
             }
         }
-    
-    
 
     return(
         <div>
@@ -38,9 +35,7 @@ const RatingCircle = (props) => {
             <text fill="#ffffff" fontSize="15" fontFamily="Verdana" x="30%" y="60%">{rating}</text>
             </svg>
         </div>
-        
     )
-    
 }
 
 export default RatingCircle;

@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className={classes.App}>
         <Header />
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Switch>
           <Route
               path={"/movie/:id"} component={Movie}/>

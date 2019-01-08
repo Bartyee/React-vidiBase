@@ -1,17 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-
-
 class FormResults extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
 
-  handleClick() {
-    document.getElementById('results').className = 'noDisplay';
-    document.getElementById('searchInput').value = '';
+  handleClick = () => {
+    document.querySelector('#results').className = 'noDisplay';
+    document.querySelector('#searchInput').value = '';
   }
 
   render() {
@@ -26,7 +20,6 @@ class FormResults extends React.Component {
                 <div>
                   <p>{this.props.results[index].title}</p>
                   <span>{this.props.results[index].release_date}</span>
-
                 </div>
               </Link>
             </li>

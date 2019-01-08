@@ -3,8 +3,7 @@ import axios from 'axios';
 import classes from './Movie.module.scss';
 import LikeButton from '../../components/likeButton/likeButton.js';
 
-
-class Movie extends React.Component {
+class Movie extends React.Component{
 
     state = {
         movie: {
@@ -22,18 +21,15 @@ class Movie extends React.Component {
         favouriteArray: []
     }
 
-    
-
     getDataApi = () =>{
         const apiKey = '30bef07fcafe04cd96cf1b120d33cfe0';
-        const movie_id = window.location.pathname.substring(7);
+        const movie_id = window.location.pathname.substring(22); // 7 normal for react, 22 git
 
         axios.get(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US&append_to_response=videos,credits`)
         .then(response => {
             this.setState({
                 movie: response.data
             });
-            
         })
         .catch(error => {
             console.log('Fetch Error', error);
@@ -45,16 +41,13 @@ class Movie extends React.Component {
     }
 
     render(){
-
         const movie = this.state.movie;
         const budgetToString = `${movie.revenue}`.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         
         let backgroundStyle = {
-            background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,1)), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path}) no-repeat fixed center `
+            background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,1)), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path}) no-repeat fixed center `,
         }
 
-        
-        
         return(
             <div className={classes.Movie}>
                 <div className={classes.backgroundAbsolute} style={backgroundStyle}>
@@ -118,18 +111,16 @@ class Movie extends React.Component {
                 <div className={classes.trailers}>
                     {movie.videos.results.map((item,index) => {
                         if(index===3){
-                            return index
+                            return index;
                         }
                         return(
                             <div className={classes.trailerItem} key={index}>
-                            <iframe title={index} width="420" height="315" src={`https://www.youtube.com/embed/${item.key}`} ></iframe>
+                            <iframe title={index} width="420" height="315" src={`https://www.youtube.com/embed/${item.key}`}></iframe>
                             </div>
                         )
                     })}
                 </div>
             </div>
-            
-                
         )
     }
 }

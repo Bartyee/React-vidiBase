@@ -24,8 +24,6 @@
         }
     }
 
-    
-
     input[type="text"]{
         width: 100%;
         background-color: #141d21;
@@ -58,10 +56,8 @@
         li{
             display: flex;
             flex-direction: row;
-            
             margin: 10px;
             
-
             img{
                 width: 100px;
                 height: 140px;
@@ -86,5 +82,4 @@
             }
         }
     }
-
 }
