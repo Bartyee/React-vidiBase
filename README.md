@@ -8,6 +8,8 @@ Webpack,
 Babel,
 Radium,
 
+Some elements on site don't works ... Let's wait for ittt :D !
+
 
 
 
