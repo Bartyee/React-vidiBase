@@ -8,10 +8,6 @@ self.__precacheManifest = [
     "url": "/React-vidiBase/static/media/magnifier.7c8905c9.svg"
   },
   {
-    "revision": "ce7a274a7cd3e5218660f0bec1e2a4b4",
-    "url": "/React-vidiBase/static/media/list-menu.ce7a274a.svg"
-  },
-  {
     "revision": "c63b54137d564433705fb3594dbb617e",
     "url": "/React-vidiBase/static/media/No_image.c63b5413.jpg"
   },
@@ -20,19 +16,19 @@ self.__precacheManifest = [
     "url": "/React-vidiBase/static/js/runtime~main.9c741bae.js"
   },
   {
-    "revision": "50faeb1d74fbb65d2c8e",
-    "url": "/React-vidiBase/static/js/main.50faeb1d.chunk.js"
+    "revision": "8bf9c847f01a95d75fe6",
+    "url": "/React-vidiBase/static/js/main.8bf9c847.chunk.js"
   },
   {
-    "revision": "e21f8c87a5f2db0fa221",
-    "url": "/React-vidiBase/static/js/1.e21f8c87.chunk.js"
+    "revision": "637da09bdde5b5404f6c",
+    "url": "/React-vidiBase/static/js/1.637da09b.chunk.js"
   },
   {
-    "revision": "50faeb1d74fbb65d2c8e",
-    "url": "/React-vidiBase/static/css/main.316c5cc3.chunk.css"
+    "revision": "8bf9c847f01a95d75fe6",
+    "url": "/React-vidiBase/static/css/main.44011cc6.chunk.css"
   },
   {
-    "revision": "587cbdb14515582d560e75bed84d4e2a",
+    "revision": "4d98d25eb1ef60e1e7ef76adad536ee5",
     "url": "/React-vidiBase/index.html"
   }
 ];
