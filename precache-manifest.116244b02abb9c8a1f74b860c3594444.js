@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/React-vidiBase/static/js/runtime~main.9c741bae.js"
   },
   {
-    "revision": "30e2212a6764a07c7f40",
-    "url": "/React-vidiBase/static/js/main.30e2212a.chunk.js"
+    "revision": "afc2d8c485e623469c2e",
+    "url": "/React-vidiBase/static/js/main.afc2d8c4.chunk.js"
   },
   {
     "revision": "637da09bdde5b5404f6c",
     "url": "/React-vidiBase/static/js/1.637da09b.chunk.js"
   },
   {
-    "revision": "30e2212a6764a07c7f40",
+    "revision": "afc2d8c485e623469c2e",
     "url": "/React-vidiBase/static/css/main.34205f1b.chunk.css"
   },
   {
-    "revision": "1506794deb002364b17bea2e4cf8a629",
+    "revision": "350524e43a771c3214c40a08951a1596",
     "url": "/React-vidiBase/index.html"
   }
 ];
