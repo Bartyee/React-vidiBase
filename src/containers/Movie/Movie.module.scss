@@ -1,3 +1,5 @@
+@import '../../GlobalStyles/GlobalStyles.scss';
+
 .Movie{
     display: flex;
 
@@ -41,7 +43,6 @@
             
             img{
                 width: 320px;
-
                 @media (max-width: 821px) { 
                     width: 100%; 
                 }
@@ -49,11 +50,10 @@
         }
 
         .details{
-
             .movieTitle{
-                color: #77ff87;
+                color: $primaryTextColorHover;
                 text-transform: uppercase;
-                font-family: 'Raleway', sans-serif;
+                font-family: $primaryFontRaleway;
                 color: #ffffff;
                 margin-bottom: 0;
                 margin-top: 15px;
@@ -61,9 +61,9 @@
     
             .movieTagLine{
                 margin-top: 0;
-                font-family: 'Roboto Condensed', sans-serif;
+                font-family: $secondaryFontRoboto;
                 font-size: 18px;
-                color: #77ff87;
+                color: $primaryTextColorHover
             }
     
             .movieOverview{
@@ -74,15 +74,15 @@
             }
     
             .genresList{
-                color: #77ff87;
+                color: $primaryTextColorHover;
                 margin-bottom: 5px;
-                font-family: 'Raleway', sans-serif;
+                font-family: $primaryFontRaleway;
             }
     
             .companyNames{
                 margin-top: 5px;
                 font-size: 14px;
-                font-family: 'Raleway', sans-serif;
+                font-family: $primaryFontRaleway;
                 color: #ffffff;
             }
     
@@ -97,13 +97,13 @@
                         color: #ffffff;
                         text-align: left;
                         font-size: 15px;
-                        font-family: 'Raleway', sans-serif;
+                        font-family: $primaryFontRaleway;
                         margin-bottom: 0;
                     }
     
                     span{
                         font-size: 20px;
-                        color: #77ff87;
+                        color: $primaryTextColorHover
                     }
                 }
 
@@ -114,13 +114,13 @@
                         color: #ffffff;
                         text-align: left;
                         font-size: 15px;
-                        font-family: 'Raleway', sans-serif;
+                        font-family: $primaryFontRaleway;
                         margin-bottom: 0;
                     }
     
                     span{
                         font-size: 20px;
-                        color: #77ff87;
+                        color: $primaryTextColorHover;
                     }
                 }
             }
@@ -129,7 +129,7 @@
 
     .trailers{
         position: absolute;
-        border: solid 1px #77ff87;
+        border: solid 1px $primaryTextColorHover;
         border-radius: 25px;
         border-top: none;
         border-bottom: none;

@@ -1,5 +1,7 @@
+@import '../../GlobalStyles/GlobalStyles.scss';
+
 .Header{
-    background-color: #141d21;
+    background-color: $primaryBackgroundColor;
     height: 65px;
     width: 100%;
     margin: 0;
@@ -25,13 +27,13 @@
             p{
                 margin: 0;
                 margin-left: 15px;
-                color: #53b25e;
+                color: $primaryTextColor;
                 font-size: 25px;
-                font-family: 'Raleway', sans-serif;
+                font-family: $primaryFontRaleway;
                 transition: 0.5s;
 
                 &:hover{
-                    color: #77ff87;
+                    color: $primaryTextColorHover;
                 }
             }
         }
@@ -60,18 +62,18 @@
 
             .item{
                 text-align: center;
-                font-family: 'Raleway', sans-serif;
+                font-family: $primaryFontRaleway;
                 font-size: 14px;
                 width: 100px;
                 margin: 0 auto;
                 
                 a{
-                    color: #53b25e;
+                    color: $primaryTextColor;
                     text-decoration: none;
                     transition: 0.5s;
 
                     &:hover{
-                        color: #77ff87;
+                        color: $primaryTextColorHover;
                     }
                 }
             }
