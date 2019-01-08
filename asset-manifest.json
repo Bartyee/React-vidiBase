@@ -1,7 +1,7 @@
 {
-  "main.css": "/React-vidiBase/static/css/main.eb782c85.chunk.css",
-  "main.js": "/React-vidiBase/static/js/main.8fa1249b.chunk.js",
-  "main.js.map": "/React-vidiBase/static/js/main.8fa1249b.chunk.js.map",
+  "main.css": "/React-vidiBase/static/css/main.316c5cc3.chunk.css",
+  "main.js": "/React-vidiBase/static/js/main.e6bfa466.chunk.js",
+  "main.js.map": "/React-vidiBase/static/js/main.e6bfa466.chunk.js.map",
   "static/js/1.e21f8c87.chunk.js": "/React-vidiBase/static/js/1.e21f8c87.chunk.js",
   "static/js/1.e21f8c87.chunk.js.map": "/React-vidiBase/static/js/1.e21f8c87.chunk.js.map",
   "runtime~main.js": "/React-vidiBase/static/js/runtime~main.9c741bae.js",
@@ -10,8 +10,8 @@
   "static/media/No_image.jpg": "/React-vidiBase/static/media/No_image.c63b5413.jpg",
   "static/media/magnifier.svg": "/React-vidiBase/static/media/magnifier.7c8905c9.svg",
   "static/media/list-menu.svg": "/React-vidiBase/static/media/list-menu.ce7a274a.svg",
-  "static/css/main.eb782c85.chunk.css.map": "/React-vidiBase/static/css/main.eb782c85.chunk.css.map",
+  "static/css/main.316c5cc3.chunk.css.map": "/React-vidiBase/static/css/main.316c5cc3.chunk.css.map",
   "index.html": "/React-vidiBase/index.html",
-  "precache-manifest.49b5a6febc4ebb61863bd34591e18939.js": "/React-vidiBase/precache-manifest.49b5a6febc4ebb61863bd34591e18939.js",
+  "precache-manifest.8f990b9b3fe5aa2f079633d79a4e8dad.js": "/React-vidiBase/precache-manifest.8f990b9b3fe5aa2f079633d79a4e8dad.js",
   "service-worker.js": "/React-vidiBase/service-worker.js"
 }
