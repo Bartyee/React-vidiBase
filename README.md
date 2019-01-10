@@ -8,5 +8,3 @@ Webpack,
 Babel,
 Radium,
 
-
-ALPHABETA DESCRIPTION... In preparing :) 
