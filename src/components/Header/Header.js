@@ -17,7 +17,7 @@ const Header = (props) => {
             </div>
             <nav className={classes.nav}>
                 <ul className={classes.list}>
-                    <li className={classes.item}><a href="#">Favourites</a></li>
+                    <li className={classes.item}><a href="/">Favourites</a></li>
                     <li className={classes.item}><a href="https://github.com/Bartyee">Github</a></li>
                     <li className={classes.item}><a href="https://developers.themoviedb.org/">MoviesDB Api</a></li>
                 </ul>

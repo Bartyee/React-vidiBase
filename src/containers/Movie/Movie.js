@@ -24,7 +24,7 @@ class Movie extends React.Component{
 
     getDataApi = () =>{
         const apiKey = '30bef07fcafe04cd96cf1b120d33cfe0';
-        const movie_id = window.location.pathname.substring(22); // 7 normal for react, 22 git
+        const movie_id = window.location.pathname.substring(22); // 7 for react, 22 git
 
         axios.get(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US&append_to_response=videos,credits`)
         .then(response => {
@@ -47,7 +47,7 @@ class Movie extends React.Component{
         const budgetToString = `${movie.revenue}`.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
         
         let backgroundStyle = {
-            background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,1)), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path}) no-repeat fixed center `,
+            background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,1)), url(${movie.backdrop_path && 'https://image.tmdb.org/t/p/original' + movie.backdrop_path }) no-repeat fixed center `,
         }
 
         
@@ -57,10 +57,16 @@ class Movie extends React.Component{
                     <div className={classes.additionalGradient}></div>
                 </div>
                 <div className={classes.wrapper}>
-                <div className={classes.cover}>
-                    <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="cover" />
-                    <LikeButton/>
-                </div>
+                    <div className={classes.cover}>
+                    {(
+                        movie.poster_path && (
+                            <React.Fragment>
+                                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="cover" />
+                                <LikeButton />
+                            </React.Fragment>
+                        )
+                        )}
+                    </div>
                 <div className={classes.details}>
                     <h1 className={classes.movieTitle}>{movie.original_title}</h1>
                     <h2 className={classes.movieTagLine}>{movie.tagline}</h2>
