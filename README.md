@@ -8,3 +8,7 @@ Webpack,
 Babel,
 Radium,
 
+
+- Favourties (localStorage)
+- Firebase (account with videos and more ... ;> )
+
