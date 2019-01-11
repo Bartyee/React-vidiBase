@@ -11,4 +11,4 @@ Radium,
 
 - Favourties (localStorage)
 - Firebase (account with videos and more ... ;> )
-
+- Routing fix :( 
