@@ -7,6 +7,7 @@ class Movie extends React.Component{
 
     state = {
         movie: {
+            render: false,
             genres: [],
             credits: {
                 cast: [],
@@ -28,7 +29,8 @@ class Movie extends React.Component{
         axios.get(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US&append_to_response=videos,credits`)
         .then(response => {
             this.setState({
-                movie: response.data
+                movie: response.data,
+                render: true
             });
         })
         .catch(error => {
@@ -48,6 +50,7 @@ class Movie extends React.Component{
             background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,1)), url(https://image.tmdb.org/t/p/original/${movie.backdrop_path}) no-repeat fixed center `,
         }
 
+        
         return(
             <div className={classes.Movie}>
                 <div className={classes.backgroundAbsolute} style={backgroundStyle}>
