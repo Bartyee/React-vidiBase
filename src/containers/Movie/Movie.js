@@ -55,7 +55,7 @@ class Movie extends React.Component{
     render(){
         const movie = this.state.movie;
         const budgetToString = `${movie.revenue}`.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        alert(this.state.url)
+        
         
         let backgroundStyle = {
             background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,1)), url(${movie.backdrop_path && 'https://image.tmdb.org/t/p/original' + movie.backdrop_path }) no-repeat fixed center `,
@@ -64,6 +64,7 @@ class Movie extends React.Component{
         
         return(
             <div className={classes.Movie}>
+                {this.state.url}
                 <div className={classes.backgroundAbsolute} style={backgroundStyle}>
                     <div className={classes.additionalGradient}></div>
                 </div>
