@@ -19,7 +19,8 @@ class Movie extends React.Component{
             },
             backdrop_path: null
         },
-        favouriteArray: []
+        favouriteArray: [],
+        url: null
     }
 
     getDataApi = () =>{
@@ -32,12 +33,13 @@ class Movie extends React.Component{
         .then(response => {
             this.setState({
                 movie: response.data,
-                render: true
+                render: true,
+                url: movie_id
             });
         })
         .catch(error => {
             console.log('Fetch Error', error);
-            console.log(movie_id);
+            
         })
     }
 
