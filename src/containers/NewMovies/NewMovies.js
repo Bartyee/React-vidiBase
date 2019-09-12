@@ -17,10 +17,19 @@ class NewMovies extends React.Component {
     componentDidMount(){
         const apiKey = '30bef07fcafe04cd96cf1b120d33cfe0';
         let date = new Date();
-        let today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-        let monthAgo = (date.getMonth() === 0 ? date.getFullYear() - 1 : date.getFullYear()) + '-' + (date.getMonth() === 0 ? date.getMonth() + 12 : date.getMonth()) + '-' + date.getDate(); 
 
-        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&primary_release_date.gte=${monthAgo}&primary_release_date.lte=${today}`)
+        let todayDay = (date.getDate() < 10 ? "0" + date.getDate() : date.getDate());
+        let todayMonth = (date.getMonth() < 10 ? "0" + (date.getMonth()+1) : (date.getMonth()+1));
+        let todayYear = date.getFullYear();
+        
+
+        let todayData = `${todayYear}-${todayMonth}-${todayDay}`;
+        let monthAgoData = `${todayYear}-0${todayMonth-1}-${todayDay}`;
+        
+        
+
+
+        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&primary_release_date.gte=${monthAgoData}&primary_release_date.lte=${todayData}`)
             .then(response =>{
                 const data = response.data;
                 const updatedData = Object.values(data)[3]; // in array number 3, we have all movies list
