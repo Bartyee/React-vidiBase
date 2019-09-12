@@ -24,7 +24,7 @@ class Movie extends React.Component{
 
     getDataApi = () =>{
         const apiKey = '30bef07fcafe04cd96cf1b120d33cfe0';
-        const movie_id = window.location.pathname.substring(7); // 7 for react, 22 git
+        const movie_id = window.location.pathname.substring(22); // 7 for react, 22 git
 
         axios.get(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}&language=en-US&append_to_response=videos,credits`)
         .then(response => {
