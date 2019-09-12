@@ -16,7 +16,7 @@ class FormResults extends React.Component {
           return(
             <li key={index} onClick={this.handleClick}>
               <Link to={`/movie/${this.props.results[index].id}`} >
-                <img src={this.props.results[index].poster_path === null ? 'http://via.placeholder.com/300x450' : `${link}${this.props.results[index].poster_path}`} alt={`${this.props.results[index].title} poster`} className="resultPoster" />
+                <img src={this.props.results[index].poster_path === null ? 'https://via.placeholder.com/300x450' : `${link}${this.props.results[index].poster_path}`} alt={`${this.props.results[index].title} poster`} className="resultPoster" />
                 <div>
                   <p>{this.props.results[index].title}</p>
                   <span>{this.props.results[index].release_date}</span>
